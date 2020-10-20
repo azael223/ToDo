@@ -1,0 +1,5 @@
+<ul class="container-scrolleable list-group">
+  <div *ngFor="let item of list.list; let i of index">
+    <app-to-do-item [item]="item" (isDeleted)="deleteItem($event)"></app-to-do-item>
+  </div>
+</ul>

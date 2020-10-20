@@ -1,0 +1,19 @@
+<li class="list-group-item d-flex flex-row bd-highlight mb-3">
+  <div class="p-2 pl-4 bd-highlight">
+    <input type="checkbox" class="form-check-input"/>
+  </div>
+  <div *ngIf="!edit" class="p-2 bd-highlight">{{ item.task }}</div>
+  <div *ngIf="edit" class="p-2 bd-highlight">
+    <input #task  type="text" value="{{ item.task }}" />
+  </div>
+  <div class="ml-auto pr-2 bd-highlight">
+    <button type="button" class="btn btn-light" (click)="editClick()">
+      <i class="fas fa-pen"></i>
+    </button>
+  </div>
+  <div class="bd-highlight">
+    <button type="button" class="btn btn-light" (click)="deleteItem()">
+      <i class="fas fa-trash"></i>
+    </button>
+  </div>
+</li>
